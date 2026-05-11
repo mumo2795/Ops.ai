@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 export function CTASection() {
   return (
@@ -22,20 +20,24 @@ export function CTASection() {
               Ready to run a sharper operation?
             </h2>
             <p className="text-body-lg text-primary-foreground/80 mb-8">
-              Join leadership teams who use Ops.AI for cross-functional visibility and faster decisions — without another
-              siloed dashboard project. Start with a free trial; no credit card required.
-            </p>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="rounded-full px-8 text-base h-12 gap-2 bg-background text-foreground hover:bg-background/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring"
-              asChild
+              Join leadership teams who use Ops.AI for cross-functional visibility and faster decisions — without another siloed dashboard project. 
+              Custom pricing built for your scale. Schedule a brief strategy session to discuss your specific requirements.            </p>
+            <a
+              href="https://calendar.app.google/jE68kqsgzNXXH3UY8"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Link href="/signup">
-                Create Free Account
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="rounded-full px-8 text-base h-12 gap-2 bg-background text-foreground hover:bg-background/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-ring"
+              >
+                Schedule a Call
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </Button>
+            </a>
           </div>
         </div>
       </div>

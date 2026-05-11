@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { OpsAiLogo } from "@/components/OpsAiBranding";
 import { cn } from "@/lib/utils";
 
@@ -137,22 +136,15 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-3 z-10">
             <ThemeToggle />
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-sm font-medium focus-ring" type="button">
-                  Log in
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>Sign in to your account</TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button size="sm" className="text-sm font-medium rounded-full px-6 focus-ring" type="button">
-                  Get Started
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>Start your 7-day free trial</TooltipContent>
-            </Tooltip>
+            <a
+              href="https://calendar.app.google/jE68kqsgzNXXH3UY8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="sm" className="text-sm font-medium rounded-full px-6 focus-ring" type="button">
+                Schedule a Call
+              </Button>
+            </a>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
@@ -189,12 +181,16 @@ export function Navbar() {
             </a>
           ))}
           <div className="pt-4 border-t border-border flex flex-col gap-3">
-            <Button variant="outline" className="w-full" type="button">
-              Log in
-            </Button>
-            <Button className="w-full rounded-full" type="button">
-              Get Started
-            </Button>
+            <a
+              href="https://calendar.app.google/jE68kqsgzNXXH3UY8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <Button className="w-full rounded-full" type="button">
+                Schedule a Call
+              </Button>
+            </a>
           </div>
         </div>
       </div>

@@ -8,7 +8,6 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { IntegrationsHub } from "@/components/sections/IntegrationsHub";
 import { PersonalDevelopment } from "@/components/sections/PersonalDevelopment";
 import { PersonalTouch } from "@/components/sections/PersonalTouch";
-import { PricingSection } from "@/components/sections/PricingSection";
 import { ProfessionalFeatures } from "@/components/sections/ProfessionalFeatures";
 import { VoiceSecuritySection } from "@/components/sections/VoiceSecuritySection";
 import { WhatsAppCommand } from "@/components/sections/WhatsAppCommand";
@@ -48,7 +47,6 @@ export default function HomePage() {
         <ProfessionalFeatures />
         <PersonalTouch />
         <PersonalDevelopment />
-        <PricingSection />
         <CTASection />
         <Footer />
       </main>

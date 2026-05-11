@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -26,20 +24,22 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <Button size="lg" className="rounded-full px-8 text-base h-12 gap-2 hover:scale-[1.03] active:scale-[0.97] transition-all duration-200 shadow-lg hover:shadow-xl focus-ring" asChild>
-              <Link href="/signup">
-                Start 7-Day Free Trial
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
+            <a
+              href="https://calendar.app.google/jE68kqsgzNXXH3UY8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="rounded-full px-8 text-base h-12 gap-2 hover:scale-[1.03] active:scale-[0.97] transition-all duration-200 shadow-lg hover:shadow-xl focus-ring">
+                Schedule a Call
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </Button>
+            </a>
             <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-base h-12 hover:scale-[1.03] active:scale-[0.97] transition-all duration-200 focus-ring">
               <a href="#how-it-works">See How It Works</a>
             </Button>
           </div>
-
-          <p className="text-caption opacity-0 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            No credit card required • Cancel anytime
-          </p>
         </div>
       </div>
     </section>

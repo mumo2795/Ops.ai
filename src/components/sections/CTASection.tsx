@@ -19,9 +19,12 @@ export function CTASection() {
             <h2 className="text-headline text-primary-foreground mb-4">
               Ready to run a sharper operation?
             </h2>
+            <p className="text-body-lg text-primary-foreground/80 mb-4">
+              Join leadership teams who use Ops.AI for cross-functional visibility and faster decisions — without another siloed dashboard project.
+            </p>
             <p className="text-body-lg text-primary-foreground/80 mb-8">
-              Join leadership teams who use Ops.AI for cross-functional visibility and faster decisions — without another siloed dashboard project. 
-              Custom pricing built for your scale. Schedule a brief strategy session to discuss your specific requirements.            </p>
+              Custom pricing built for your scale. Schedule a brief strategy session to discuss your specific requirements.
+            </p>
             <a
               href="https://calendar.app.google/jE68kqsgzNXXH3UY8"
               target="_blank"

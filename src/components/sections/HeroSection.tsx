@@ -36,9 +36,6 @@ export function HeroSection() {
                 </svg>
               </Button>
             </a>
-            <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-base h-12 hover:scale-[1.03] active:scale-[0.97] transition-all duration-200 focus-ring">
-              <a href="#how-it-works">See How It Works</a>
-            </Button>
           </div>
         </div>
       </div>

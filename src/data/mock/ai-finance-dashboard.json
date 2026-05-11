@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "AI Finance",
+    "subtitle": "Real-time finance command view for cash, receivables, payables, approvals, and execution.",
+    "badge": "Mock data",
+    "lastUpdated": "2026-04-26T21:45:00+08:00"
+  },
+  "kpis": [
+    { "label": "Cash balance", "value": "$4.28M", "delta": "+6.2% vs last month" },
+    { "label": "Overdue invoices", "value": "23", "delta": "8 above target" },
+    { "label": "DSO", "value": "41 days", "delta": "-2 days improvement" },
+    { "label": "Monthly burn", "value": "$312k", "delta": "Within approved plan" }
+  ],
+  "alerts": [
+    {
+      "level": "high",
+      "item": "Aster Retail",
+      "issue": "Invoice INV-23041 is 52 days overdue",
+      "amount": "$86,200",
+      "owner": "Nadia (AR Lead)"
+    },
+    {
+      "level": "medium",
+      "item": "Cloud spend",
+      "issue": "Current run-rate is 14% above budget",
+      "amount": "$42,000 variance",
+      "owner": "Ravi (Finance Ops)"
+    },
+    {
+      "level": "medium",
+      "item": "Vendor renewal",
+      "issue": "ERP support contract expires in 19 days",
+      "amount": "$120,000 annual",
+      "owner": "Maya (Procurement)"
+    }
+  ],
+  "collectionsPipeline": [
+    {
+      "account": "Aster Retail",
+      "balance": "$86,200",
+      "aging": "52 days",
+      "probability": "68%",
+      "nextAction": "Escalation call + revised payment plan"
+    },
+    {
+      "account": "Nova Medical",
+      "balance": "$41,900",
+      "aging": "37 days",
+      "probability": "81%",
+      "nextAction": "Send final reminder + auto follow-up"
+    },
+    {
+      "account": "Bluewave Logistics",
+      "balance": "$25,300",
+      "aging": "29 days",
+      "probability": "74%",
+      "nextAction": "Finance manager outreach this week"
+    },
+    {
+      "account": "Orchid Commerce",
+      "balance": "$14,750",
+      "aging": "18 days",
+      "probability": "92%",
+      "nextAction": "Standard reminder cadence"
+    }
+  ],
+  "payablesSchedule": [
+    { "vendor": "Atlas Cloud", "dueDate": "2026-04-29", "amount": "$24,800", "priority": "High", "category": "Infrastructure" },
+    { "vendor": "Core Logistics", "dueDate": "2026-05-01", "amount": "$18,600", "priority": "Medium", "category": "Distribution" },
+    { "vendor": "Nova Talent", "dueDate": "2026-05-03", "amount": "$13,200", "priority": "Medium", "category": "Contract staffing" },
+    { "vendor": "ClearPrint", "dueDate": "2026-05-06", "amount": "$4,900", "priority": "Low", "category": "Office operations" }
+  ],
+  "approvalQueue": [
+    { "id": "FIN-AP-2201", "request": "Approve emergency cloud budget top-up", "owner": "CFO", "channel": "Telegram", "status": "Pending approval" },
+    { "id": "FIN-AP-2204", "request": "Approve collections legal escalation", "owner": "Finance Director", "channel": "Telegram + Email", "status": "In review" },
+    { "id": "FIN-AP-2207", "request": "Approve payment plan for Aster Retail", "owner": "AR Lead", "channel": "Telegram", "status": "Ready to execute" }
+  ],
+  "aiRecommendations": [
+    "Prioritize top 5 overdue invoices first; expected recovery is ~$214k in 7 days.",
+    "Freeze non-critical software spend for two weeks to offset cloud budget overrun.",
+    "Move weekly cash forecast refresh to every 48 hours until DSO is below 38 days."
+  ]
+}

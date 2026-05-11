@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "AI Operation",
+    "subtitle": "SKADA/SCADA command-center monitoring, biotech batch control, and agentic execution via Telegram/WhatsApp.",
+    "badge": "Mock data",
+    "lastUpdated": "2026-04-29T02:50:00+08:00"
+  },
+  "kpis": [
+    {
+      "label": "SKADA active incidents",
+      "value": "5",
+      "delta": "2 high-priority plant actions"
+    },
+    {
+      "label": "Plant availability",
+      "value": "98%",
+      "delta": "Uptime today across monitored plants"
+    },
+    {
+      "label": "Biotech batch compliance",
+      "value": "99.2%",
+      "delta": "21 CFR Part 11 audit trail complete"
+    },
+    {
+      "label": "Automated command execution",
+      "value": "74%",
+      "delta": "+11% month to date"
+    }
+  ],
+  "alerts": [
+    {
+      "level": "high",
+      "domain": "SKADA Plant Ops",
+      "issue": "Gas pressure fluctuating (+/- 8%) at Plant B; output risk ~3% in next 2-3 hours.",
+      "recommendedAction": "Adjust gas feed pressure and inspect valve section B immediately."
+    },
+    {
+      "level": "medium",
+      "domain": "Power Generation",
+      "issue": "Efficiency dropped to 91% from 94% baseline.",
+      "recommendedAction": "Run combustion tuning sequence and verify feedstock consistency."
+    },
+    {
+      "level": "medium",
+      "domain": "Biotech Fermentation",
+      "issue": "Dissolved oxygen trend is below recipe curve in Reactor F-12.",
+      "recommendedAction": "Increase aeration by 5% and trigger nutrient dosing step per batch recipe."
+    }
+  ],
+  "aiInsights": [
+    {
+      "title": "Plant status risk in next 3 hours",
+      "insight": "Gas pressure variance (+/- 8%) is the strongest predictor of short-term output drop.",
+      "confidence": "High (92%)",
+      "recommendedAction": "Approve immediate valve section B inspection and gas feed pressure adjustment."
+    },
+    {
+      "title": "Efficiency recovery opportunity",
+      "insight": "Returning efficiency from 91% to 94% baseline can recover estimated RM15K daily value.",
+      "confidence": "Medium-High (87%)",
+      "recommendedAction": "Run combustion tuning and verify feedstock consistency within current shift."
+    },
+    {
+      "title": "Biotech batch protection",
+      "insight": "Reactor F-12 dissolved oxygen drift may reduce yield if not corrected before next nutrient phase.",
+      "confidence": "High (90%)",
+      "recommendedAction": "Increase aeration 5%, apply recipe correction, and log e-signature for compliance."
+    }
+  ],
+  "workflows": [
+    {
+      "name": "SKADA status workflow",
+      "trigger": "CEO asks status via Telegram/WhatsApp",
+      "automation": "Pull SCADA tags, analyze risk, return current status + recommendation + approval prompt",
+      "status": "active"
+    },
+    {
+      "name": "Agentic operator dispatch workflow",
+      "trigger": "CEO approves recommended action (Ya/Yes/Sure)",
+      "automation": "Send execution email to operator, request job status and photo proof, track response",
+      "status": "active"
+    },
+    {
+      "name": "Biotech compliance workflow",
+      "trigger": "BioSCADA batch parameter deviation detected",
+      "automation": "Apply validated recipe correction, log e-signature, archive audit trail for compliance",
+      "status": "active"
+    }
+  ],
+  "executionQueue": [
+    {
+      "id": "OPS-EX-701",
+      "task": "Generate live SKADA plant status report for CEO request",
+      "owner": "Ops.AI Command Center",
+      "channel": "Telegram",
+      "progress": "Completed"
+    },
+    {
+      "id": "OPS-EX-706",
+      "task": "Dispatch valve section B instruction to plant operator",
+      "owner": "Ops.AI Agent",
+      "channel": "Email + Telegram",
+      "progress": "Waiting for operator proof"
+    },
+    {
+      "id": "OPS-EX-711",
+      "task": "Validate biotech CIP/SIP completion log for Batch BT-442",
+      "owner": "Biotech Shift Lead",
+      "channel": "Dashboard + Email",
+      "progress": "In progress"
+    }
+  ],
+  "domainSnapshot": [
+    {
+      "domain": "SKADA Plant Ops",
+      "openTasks": 4,
+      "sla": "96%",
+      "health": "Watch"
+    },
+    {
+      "domain": "Power Optimization",
+      "openTasks": 6,
+      "sla": "94%",
+      "health": "Needs action"
+    },
+    {
+      "domain": "Biotech BioSCADA",
+      "openTasks": 5,
+      "sla": "99%",
+      "health": "Healthy"
+    },
+    {
+      "domain": "Command Center Automation",
+      "openTasks": 3,
+      "sla": "98%",
+      "health": "Healthy"
+    }
+  ],
+  "slaBreaches": [
+    { "ticket": "OPS-SLA-301", "domain": "SKADA Plant Ops", "age": "2h", "impact": "Valve section B inspection proof pending", "owner": "Plant Operator Shift B" },
+    { "ticket": "OPS-SLA-307", "domain": "Power Optimization", "age": "5h", "impact": "Efficiency recovery task not closed", "owner": "Plant Engineer" },
+    { "ticket": "OPS-SLA-315", "domain": "Biotech BioSCADA", "age": "1h", "impact": "Batch pH drift acknowledgement delay", "owner": "Bioprocess Supervisor" }
+  ],
+  "completionFeed": [
+    { "time": "02:44", "task": "SKADA status insight sent: output 4.2 MW, efficiency 91%, availability 98%", "channel": "Telegram", "recipient": "CEO" },
+    { "time": "02:46", "task": "Operator email sent: adjust gas pressure and inspect valve section B", "channel": "Email", "recipient": "xxxx@gmail.com" },
+    { "time": "02:49", "task": "Biotech alert handled: DO correction applied with audit signature", "channel": "Dashboard + Email", "recipient": "Biotech Shift Lead" }
+  ]
+}

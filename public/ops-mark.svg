@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Ops.AI">
+  <rect width="128" height="128" rx="42" fill="#1a1a1a" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+  <text
+    x="64"
+    y="84"
+    text-anchor="middle"
+    font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter, sans-serif"
+    font-size="56"
+    font-weight="700"
+    letter-spacing="-0.04em"
+    fill="#fafafa"
+  >
+    O
+  </text>
+</svg>

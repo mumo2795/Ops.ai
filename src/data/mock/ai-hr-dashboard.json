@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "title": "AI HR",
+    "subtitle": "Workforce intelligence and execution view for people operations.",
+    "badge": "Mock data",
+    "lastUpdated": "2026-04-26T21:30:00+08:00"
+  },
+  "kpis": [
+    {
+      "label": "Headcount",
+      "value": "312",
+      "delta": "+8 net this month"
+    },
+    {
+      "label": "Absenteeism rate",
+      "value": "5.4%",
+      "delta": "+1.1% vs target"
+    },
+    {
+      "label": "Open roles",
+      "value": "14",
+      "delta": "4 critical roles"
+    },
+    {
+      "label": "Payroll exceptions",
+      "value": "9",
+      "delta": "3 require approval today"
+    }
+  ],
+  "alerts": [
+    {
+      "level": "high",
+      "team": "Customer Support",
+      "issue": "Absenteeism crossed 8% for 3 consecutive days.",
+      "recommendedAction": "Trigger attendance follow-up workflow with manager and HRBP."
+    },
+    {
+      "level": "medium",
+      "team": "Operations",
+      "issue": "Two payroll overtime claims exceed policy threshold.",
+      "recommendedAction": "Request manager justification before payroll cut-off."
+    },
+    {
+      "level": "medium",
+      "team": "Product",
+      "issue": "Senior backend role open for 31 days.",
+      "recommendedAction": "Escalate to hiring lead and assign interview panel today."
+    }
+  ],
+  "aiInsights": [
+    {
+      "title": "Attendance hotspot detection",
+      "insight": "Customer Support absenteeism trend suggests rising burnout risk in Team B this week.",
+      "confidence": "High (91%)",
+      "recommendedAction": "Trigger manager check-ins, rebalance shift load, and monitor 72-hour attendance response."
+    },
+    {
+      "title": "Payroll anomaly prevention",
+      "insight": "Current overtime exceptions are concentrated in Operations and likely tied to shift imbalance.",
+      "confidence": "Medium (84%)",
+      "recommendedAction": "Require manager justification before payout and adjust next-week roster coverage."
+    },
+    {
+      "title": "Hiring bottleneck impact",
+      "insight": "Open senior backend role is affecting delivery throughput and increasing team overtime pressure.",
+      "confidence": "Medium-High (86%)",
+      "recommendedAction": "Escalate to hiring panel today and fast-track interview scheduling."
+    }
+  ],
+  "workflows": [
+    {
+      "name": "Attendance trigger workflow",
+      "trigger": "Employee absent 2 times in 7 days",
+      "automation": "Notify manager + HR, open check-in task, log root cause",
+      "status": "active"
+    },
+    {
+      "name": "Leave conflict workflow",
+      "trigger": "Leave request overlaps critical shift",
+      "automation": "Flag conflict, suggest replacement, route approval",
+      "status": "active"
+    },
+    {
+      "name": "Payroll anomaly workflow",
+      "trigger": "Overtime allowance above policy threshold",
+      "automation": "Create approval request and hold payout until confirmed",
+      "status": "active"
+    }
+  ],
+  "executionQueue": [
+    {
+      "id": "HR-EX-1902",
+      "task": "Attendance follow-up for Support Team B",
+      "owner": "Nadia HRBP",
+      "channel": "Telegram",
+      "progress": "In progress"
+    },
+    {
+      "id": "HR-EX-1906",
+      "task": "Payroll exception approval - Ops overtime",
+      "owner": "Ravi Ops Manager",
+      "channel": "Telegram",
+      "progress": "Pending approval"
+    },
+    {
+      "id": "HR-EX-1911",
+      "task": "Escalate backend hiring bottleneck",
+      "owner": "Talent Lead",
+      "channel": "Email + Telegram",
+      "progress": "Queued"
+    }
+  ],
+  "departmentSnapshot": [
+    {
+      "department": "Customer Support",
+      "headcount": 64,
+      "attendanceRate": "91.8%",
+      "attritionRisk": "High"
+    },
+    {
+      "department": "Operations",
+      "headcount": 52,
+      "attendanceRate": "94.7%",
+      "attritionRisk": "Medium"
+    },
+    {
+      "department": "Product",
+      "headcount": 48,
+      "attendanceRate": "96.1%",
+      "attritionRisk": "Low"
+    },
+    {
+      "department": "Sales",
+      "headcount": 73,
+      "attendanceRate": "95.2%",
+      "attritionRisk": "Medium"
+    }
+  ],
+  "attendanceSummary": {
+    "presentToday": 289,
+    "absentToday": 14,
+    "lateToday": 9,
+    "onLeaveToday": 12
+  },
+  "employeeRoster": [
+    {
+      "employeeId": "EMP-001",
+      "name": "Alicia Tan",
+      "department": "Customer Support",
+      "role": "Support Specialist",
+      "manager": "Nadia Rahman",
+      "attendanceStatus": "Present",
+      "checkIn": "08:57",
+      "workMode": "Onsite"
+    },
+    {
+      "employeeId": "EMP-002",
+      "name": "Farid Iskandar",
+      "department": "Operations",
+      "role": "Ops Coordinator",
+      "manager": "Ravi Menon",
+      "attendanceStatus": "Late",
+      "checkIn": "09:41",
+      "workMode": "Onsite"
+    },
+    {
+      "employeeId": "EMP-003",
+      "name": "Melissa Chong",
+      "department": "Product",
+      "role": "Backend Engineer",
+      "manager": "Irfan Lee",
+      "attendanceStatus": "Present",
+      "checkIn": "09:02",
+      "workMode": "Remote"
+    },
+    {
+      "employeeId": "EMP-004",
+      "name": "Jonathan Lim",
+      "department": "Sales",
+      "role": "Account Executive",
+      "manager": "Rina Sari",
+      "attendanceStatus": "Absent",
+      "checkIn": "-",
+      "workMode": "Field"
+    },
+    {
+      "employeeId": "EMP-005",
+      "name": "Nur Aisyah",
+      "department": "Customer Support",
+      "role": "Team Lead",
+      "manager": "Nadia Rahman",
+      "attendanceStatus": "Present",
+      "checkIn": "08:49",
+      "workMode": "Onsite"
+    },
+    {
+      "employeeId": "EMP-006",
+      "name": "Sanjay Kumar",
+      "department": "Operations",
+      "role": "Procurement Analyst",
+      "manager": "Ravi Menon",
+      "attendanceStatus": "On Leave",
+      "checkIn": "-",
+      "workMode": "Onsite"
+    },
+    {
+      "employeeId": "EMP-007",
+      "name": "Clara Wong",
+      "department": "Product",
+      "role": "Product Manager",
+      "manager": "Irfan Lee",
+      "attendanceStatus": "Present",
+      "checkIn": "08:58",
+      "workMode": "Remote"
+    },
+    {
+      "employeeId": "EMP-008",
+      "name": "Hakim Zulkifli",
+      "department": "Sales",
+      "role": "Sales Development Rep",
+      "manager": "Rina Sari",
+      "attendanceStatus": "Late",
+      "checkIn": "09:36",
+      "workMode": "Hybrid"
+    },
+    {
+      "employeeId": "EMP-009",
+      "name": "Brenda Ng",
+      "department": "Customer Support",
+      "role": "QA Specialist",
+      "manager": "Nadia Rahman",
+      "attendanceStatus": "Present",
+      "checkIn": "08:53",
+      "workMode": "Onsite"
+    },
+    {
+      "employeeId": "EMP-010",
+      "name": "Daniel Goh",
+      "department": "Operations",
+      "role": "Warehouse Planner",
+      "manager": "Ravi Menon",
+      "attendanceStatus": "Present",
+      "checkIn": "08:47",
+      "workMode": "Onsite"
+    },
+    {
+      "employeeId": "EMP-011",
+      "name": "Priya Nair",
+      "department": "Product",
+      "role": "QA Engineer",
+      "manager": "Irfan Lee",
+      "attendanceStatus": "Present",
+      "checkIn": "09:01",
+      "workMode": "Remote"
+    },
+    {
+      "employeeId": "EMP-012",
+      "name": "Marcus Teo",
+      "department": "Sales",
+      "role": "Enterprise AE",
+      "manager": "Rina Sari",
+      "attendanceStatus": "On Leave",
+      "checkIn": "-",
+      "workMode": "Field"
+    }
+  ],
+  "attendanceLog": [
+    {
+      "date": "2026-04-26",
+      "department": "Customer Support",
+      "present": 58,
+      "absent": 4,
+      "late": 2,
+      "onLeave": 0
+    },
+    {
+      "date": "2026-04-26",
+      "department": "Operations",
+      "present": 47,
+      "absent": 2,
+      "late": 2,
+      "onLeave": 1
+    },
+    {
+      "date": "2026-04-26",
+      "department": "Product",
+      "present": 45,
+      "absent": 1,
+      "late": 1,
+      "onLeave": 1
+    },
+    {
+      "date": "2026-04-26",
+      "department": "Sales",
+      "present": 66,
+      "absent": 3,
+      "late": 4,
+      "onLeave": 2
+    }
+  ]
+}

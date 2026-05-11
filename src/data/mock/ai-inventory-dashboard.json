@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "AI Inventory",
+    "subtitle": "Warehouse, replenishment, supplier, and stock movement intelligence for daily operations.",
+    "badge": "Mock data",
+    "lastUpdated": "2026-04-26T21:45:00+08:00"
+  },
+  "kpis": [
+    { "label": "Fill rate", "value": "97.4%", "delta": "+1.1% vs last week" },
+    { "label": "Stockout risk SKUs", "value": "18", "delta": "5 are high priority" },
+    { "label": "Inventory value", "value": "$2.14M", "delta": "2.8% above target" },
+    { "label": "Late inbound POs", "value": "7", "delta": "2 critical supplier delays" }
+  ],
+  "riskSkus": [
+    {
+      "sku": "SKU-A112",
+      "warehouse": "West DC",
+      "coverage": "4 days",
+      "demandTrend": "+19%",
+      "recommendation": "Transfer 300 units from Central DC"
+    },
+    {
+      "sku": "SKU-B872",
+      "warehouse": "North DC",
+      "coverage": "5 days",
+      "demandTrend": "+12%",
+      "recommendation": "Release rush PO to Orion Supply"
+    },
+    {
+      "sku": "SKU-C441",
+      "warehouse": "West DC",
+      "coverage": "3 days",
+      "demandTrend": "+27%",
+      "recommendation": "Pause promo until replenishment lands"
+    },
+    {
+      "sku": "SKU-D903",
+      "warehouse": "South DC",
+      "coverage": "6 days",
+      "demandTrend": "+9%",
+      "recommendation": "Reallocate safety stock threshold"
+    }
+  ],
+  "warehouseSnapshot": [
+    { "warehouse": "Central DC", "utilization": "82%", "openTransfers": 6, "health": "Healthy" },
+    { "warehouse": "West DC", "utilization": "91%", "openTransfers": 9, "health": "Needs action" },
+    { "warehouse": "North DC", "utilization": "76%", "openTransfers": 4, "health": "Watch" },
+    { "warehouse": "South DC", "utilization": "69%", "openTransfers": 3, "health": "Healthy" }
+  ],
+  "delayedPos": [
+    { "po": "PO-22091", "supplier": "Orion Supply", "etaDelay": "4 days", "impact": "Affects 2 top-selling SKUs", "owner": "Kai (Procurement)" },
+    { "po": "PO-22104", "supplier": "Deltacore", "etaDelay": "3 days", "impact": "Backorder risk in West DC", "owner": "Lina (Inventory Ops)" },
+    { "po": "PO-22076", "supplier": "Atlas Parts", "etaDelay": "2 days", "impact": "Low impact, buffer available", "owner": "Arif (Ops Planner)" }
+  ],
+  "replenishmentQueue": [
+    { "id": "INV-RQ-341", "task": "Create replenishment PO for SKU-A112", "warehouse": "West DC", "channel": "Telegram", "status": "Pending approval" },
+    { "id": "INV-RQ-344", "task": "Approve transfer Central -> West", "warehouse": "Central DC", "channel": "Telegram + Email", "status": "In progress" },
+    { "id": "INV-RQ-349", "task": "Update reorder point for SKU-C441", "warehouse": "West DC", "channel": "Dashboard action", "status": "Ready to execute" }
+  ],
+  "aiRecommendations": [
+    "Trigger cross-warehouse transfer now to prevent projected stockout in 72 hours.",
+    "Temporarily increase reorder point for SKU-C441 by 15% due to sustained demand spike.",
+    "Consolidate two smaller POs into one expedited shipment to reduce freight cost by ~8%."
+  ]
+}

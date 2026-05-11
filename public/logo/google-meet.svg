@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Google Meet">
+  <path fill="#00897B" d="M6 14c0-2.2 1.8-4 4-4h14c2.2 0 4 1.8 4 4v20c0 2.2-1.8 4-4 4H10c-2.2 0-4-1.8-4-4V14z"/>
+  <path fill="#00BFA5" d="M38 18l8-5v22l-8-5v-12z"/>
+  <path fill="#E0F2F1" d="M18 22h8v4h-8v-4zm0-6h8v4h-8v-4z" opacity=".35"/>
+</svg>

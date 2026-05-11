@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Outlook">
+  <rect width="48" height="48" rx="8" fill="#0078D4"/>
+  <path fill="#fff" d="M12 14h16l8 4v16l-8 4H12V14zm4 4v16h12V18H16zm14 2 6 3v10l-6 3V20z" opacity=".95"/>
+</svg>

@@ -8,11 +8,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { OpsAiLogo } from "@/components/OpsAiBranding";
 import { cn } from "@/lib/utils";
 
-const navLinks = [
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#features", label: "Features" },
-  { href: "#pricing", label: "Pricing" },
-];
+const navLinks: { href: string; label: string }[] = [];
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

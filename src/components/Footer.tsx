@@ -64,7 +64,7 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="container-main py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Ops.AI. All rights reserved.</p>
-          <p className="text-sm text-muted-foreground">Operations • Intelligence • Governance</p>
+          <p className="text-sm text-muted-foreground">a product by <span className="font-medium">Sync AI Sdn. Bhd.</span></p>
         </div>
       </div>
     </footer>
